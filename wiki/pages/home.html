@@ -1,0 +1,158 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+
+
+<div id="mountain">
+  <h1>IGEM<br />阿巴阿巴阿巴</h1>
+  <div class="background"></div>
+
+</div>
+<div class="shell">
+  <!-- <div class="text">
+    <div>
+      <h1>标题标题标题</h1>
+      <p>&nbsp;&nbsp;abababa一堆内容aaaaaaaaaaaaaaaaaaaa
+        aaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      </p>
+    </div>
+  </div> -->
+
+  <!-- <div class="image" style="background-image: url(../../static/img/images/1sy.jpg)"></div> -->
+
+  <!-- <div class="text">
+    <div>
+      <h1>标题标题标题</h1>
+      <p>&nbsp;&nbsp;abababa一堆内容aaaaaaaaaaaaaaaaaaaa
+        aaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      </p>
+    </div>
+  </div> -->
+
+  <!-- <div class="image" style="background-image: url(../../static/img/images/2sy.jpg)"></div> -->
+  <div class="image-wrapper1">
+    <div class="image1" style="background-image: url(../../static/img/tu/tupian/IMG_6747.JPG)">
+
+      <div class="img1" style="background-image: url(../../static/img/tu/tupian/1o.png)"></div>
+    </div>
+  </div>
+  <!-- <div class="text">
+    <div>
+      <h1>标题标题标题</h1>
+      <p>&nbsp;&nbsp;abababa一堆内容aaaaaaaaaaaaaaaaaaaa
+        aaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      </p>
+    </div>
+  </div> -->
+
+  <div class="image" style="background-image: url(../../static/img/images/3sy.jpg)"></div>
+  <div class="image" style="background-image: url(../../static/img/images/4sy.jpg)"></div>
+  <div class="image" style="background-image: url(../../static/img/images/5sy.jpg)"></div>
+  <!-- <div class="image" style="background-image: url(../../static/img/images/6sy.jpg)"></div> -->
+  <div class="image-wrapper4">
+    <div class="image4" style="background-image: url(../../static/img/tu/tupian/IMG_6750.JPG)">
+      <div class="text4 ">
+        <p>Glasses-- May compress the nasal bridge, especially harmful for teenagers who are experiencing physical
+          growth.</p>
+        <p>Contact lenses-- May result in eye infection.</p>
+        <p>Operation-- May cause sequela like dry eye.</p>
+        <p>The efficacy of adenosine receptor (ADOR) antagonists in mitigating the progression of myopia has been
+          demonstrated in
+          both human subjects and animal models [2].</p>
+        <p>Among them, intake of 7-methylxanthine (7-MX) is associated with efficacy of alleviating school myopia in
+          children[3],
+          which is proven as a non-toxic and effective compound to reduce myopia progression and axial eye growth in
+          both
+          pre-clinical and clinical studies[4].</p>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="image" style="background-image: url(../../static/img/images/7sy.jpg)"></div> -->
+  <div class="image-wrapper5">
+    <div class="image5" style="background-image: url(../../static/img/tu/tupian/IMG_6751.JPG)">
+      <div class="text5 ">
+        <p>7-MX is one of the ideal compounds for orally administered treatments, which usually have considerably
+          preventive
+          effects on progressive myopia without side effects [5,6].</p>
+        <p> Lofty price is a significant factor limiting the entry of 7-MX into the public's view.</p>
+        <p>Another aspect to consider is the appropriate form to adopt in order to make 7-MX enter the market and get
+          consumers’
+          favor.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-wrapper6">
+    <div class="image6" style="background-image: url(../../static/img/tu/tupian/IMG_6752.JPG)">
+      <div class="text6 ">
+        <p>The biomanufacturing process to convert caffeine into 7-MX has a great potential to decrease the cost of 7-MX
+          production.</p>
+        <p> Combining 7-MX with coffee, an internationally popular beverage in the modern society, has the
+          potential to provide individuals, particularly teenagers, with the opportunity to prevent their myopia
+          development when enjoying coffee’s delicacy.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <div class="text">
+    <div>
+      <h1>标题标题标题</h1>
+      <p>&nbsp;&nbsp;abababa一堆内容aaaaaaaaaaaaaaaaaaaa
+        aaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      </p>
+    </div>
+
+  </div>
+</div> -->
+
+  <script>
+    const background = document.querySelector(".background");
+
+    document.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY !== 0) {
+        background.style.backgroundPosition = `calc(50% + ${scrollY}px) calc(50% + ${scrollY}px)`;
+      } else {
+        background.style.backgroundPosition = "";
+      }
+    });
+    function centerText() {
+      var imageWrapper = document.querySelector('.image-wrapper');
+      var text = document.querySelector('.text');
+
+      var imageHeight = imageWrapper.offsetHeight;
+      var textHeight = text.offsetHeight;
+
+      var paddingTop = (imageHeight - textHeight) / 2;
+
+      text.style.paddingTop = paddingTop + 'px';
+    }
+
+    // 当页面加载完成时调用一次centerText函数
+    window.onload = function () {
+      centerText();
+    };
+
+    // 当窗口大小改变时调用centerText函数
+    window.onresize = function () {
+      centerText();
+    };
+  </script>
+
+
+
+  {% endblock %}
